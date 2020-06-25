@@ -23,4 +23,9 @@ public class EmpServiceImpl implements EmpService {
     public List<Emp> findEmps() {
         return empMapper.selAll();
     }
+
+    @Override
+    public int addEmp(Emp emp) {
+        return empMapper.insEmp(emp);
+    }
 }

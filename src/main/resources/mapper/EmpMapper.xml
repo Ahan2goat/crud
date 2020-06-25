@@ -6,4 +6,8 @@
     <select id="selAll" resultType="emp">
         select * from emp
     </select>
+
+    <insert id="insEmp" parameterType="emp">
+        insert into emp values(#{id}, #{name}, #{pwd})
+    </insert>
 </mapper>

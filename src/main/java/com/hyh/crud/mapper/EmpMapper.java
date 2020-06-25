@@ -13,4 +13,6 @@ import java.util.List;
 public interface EmpMapper {
 
     List<Emp> selAll();
+
+    int insEmp(Emp emp);
 }

@@ -12,4 +12,6 @@ import java.util.List;
 public interface EmpService {
 
     public List<Emp> findEmps();
+
+    public int addEmp(Emp emp);
 }

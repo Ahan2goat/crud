@@ -31,4 +31,10 @@ public class Firsttest {
             System.out.println(emp);
         }
     }
+
+    @Test
+    public void test02(){
+        Emp emp = new Emp(56,"23", "123");
+        empMapper.insEmp(emp);
+    }
 }
