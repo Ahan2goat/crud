@@ -15,4 +15,6 @@ public interface EmpMapper {
     List<Emp> selAll();
 
     int insEmp(Emp emp);
+
+    int delOneEmp(int id);
 }

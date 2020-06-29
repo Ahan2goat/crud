@@ -14,4 +14,6 @@ public interface EmpService {
     public List<Emp> findEmps();
 
     public int addEmp(Emp emp);
+
+    public int delEmp(int id);
 }

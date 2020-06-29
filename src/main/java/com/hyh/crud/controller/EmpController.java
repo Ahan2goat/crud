@@ -5,9 +5,12 @@ import com.hyh.crud.service.EmpService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.websocket.server.PathParam;
 import java.util.List;
 import java.util.Map;
 
@@ -51,4 +54,16 @@ public class EmpController {
             return "reg";
         }
     }
+
+    @RequestMapping("emp/del/{id}")
+    @ResponseBody
+    public String cutEmp(@PathVariable("id") int id){
+        int i = empService.delEmp(id);
+        if (i > 0) {
+            return "删除成功！";
+        }
+        return "删除失败";
+    }
+
+
 }

@@ -10,4 +10,8 @@
     <insert id="insEmp" parameterType="emp">
         insert into emp values(#{id}, #{name}, #{pwd})
     </insert>
+
+    <delete id="delOneEmp" parameterType="int">
+        delete from emp where id = #{id}
+    </delete>
 </mapper>
